@@ -1,0 +1,27 @@
+{
+  "name": "playlist-live",
+  "version": "1.0.0",
+  "description": "Playlist da Blue",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codethi/playlist-live.git"
+  },
+  "author": "Thi Code",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/codethi/playlist-live/issues"
+  },
+  "homepage": "https://github.com/codethi/playlist-live#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.2.0",
+    "nodemon": "^2.0.15"
+  }
+}
