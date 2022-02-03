@@ -13,8 +13,9 @@ app.use(express.urlencoded());
 
 connetToDb();
 
-app.get("/", (req, res) => {
-  res.render("index");
+app.get("/", async (req, res) => {
+  const playlist = await Music.find();
+  res.render("index", { playlist });
 });
 
 app.get("/admin", (req, res) => {
@@ -24,7 +25,7 @@ app.get("/admin", (req, res) => {
 app.post("/create", async (req, res) => {
   const music = req.body;
   await Music.create(music);
-  res.redirect("/")
+  res.redirect("/");
 });
 
 app.listen(port, () =>
