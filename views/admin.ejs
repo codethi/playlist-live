@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playlist</title>
+</head>
+<body>
+    <h1>Cadastre uma nova música</h1>
+
+    <form action="/create" method="post">
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name">
+
+        <label for="author">Autor:</label>
+        <input type="text" name="author" id="author">
+
+        <label for="linkImage">Link da Imagem:</label>
+        <input type="text" name="linkImage" id="linkImage">
+
+        <label for="linkMusic">Link da Música:</label>
+        <input type="text" name="linkMusic" id="linkMusic">
+
+        <button type="submit">Cadastrar</button>
+    </form>
+</body>
+</html>
