@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial;
+}
+
+body {
+  background-color: #121214;
+  color: #fff;
+}
+
+nav ul {
+  padding: 1rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul li img {
+  width: 20%;
+}
+
+nav ul li i {
+  font-size: 1.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #fff;
+}
+
+section#player {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding-bottom: 10rem;
+}
+
+section#player h1 {
+  width: 100%;
+  text-align: center;
+  padding: 0 0 5rem 0;
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+section#player div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+section#player div img#currentImg {
+  width: 25rem;
+  height: 25rem;
+}
+
+section#player div h2#currentName {
+  width: 100%;
+  text-align: center;
+  padding: 1rem 0 0.5rem 0;
+  font-size: 2rem;
+}
+
+section#player table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 50rem;
+}
+
+section#player table th,
+td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+section#player table td img {
+  width: 3rem;
+}
