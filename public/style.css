@@ -222,3 +222,36 @@ form#form-modal {
   width: 100%;
   padding: 2rem 0;
 }
+
+section#modal div#card p{
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 2rem;
+}
+
+section#modal div#card div#btn-confirm {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 2rem;
+}
+
+section#modal div#card div#btn-confirm a{
+  text-decoration: none;
+  color: #fff;
+  border: solid 1px #fff;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  transition: all 0.2s ease-in-out;
+  width: 30%;
+  text-align: center;
+}
+
+section#modal div#card div#btn-confirm a#no:hover{
+  background-color: #ff0000;
+  border: 1px solid #ff0000;
+}
+
+section#modal div#card div#btn-confirm a#yes:hover{
+  background-color: #0044ff;
+  border: 1px solid #0044ff;
+}
