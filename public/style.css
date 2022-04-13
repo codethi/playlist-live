@@ -127,7 +127,7 @@ form button {
   font-weight: 800;
   display: flex;
   justify-content: center;
-  margin: 0 auto; 
+  margin: 0 auto;
   background-color: transparent;
   color: #00a53f;
   width: 70%;
@@ -136,12 +136,12 @@ form button {
   transition: all 0.2s ease-in-out;
 }
 
-form button:hover{
+form button:hover {
   background-color: #00a53f;
   color: #fff;
 }
 
-section#player h2{
+section#player h2 {
   width: 100%;
   padding: 0 0 5rem 0;
   font-size: 3rem;
@@ -150,7 +150,7 @@ section#player h2{
   margin-top: 3rem;
 }
 
-td#actions a{
+td#actions a {
   text-decoration: none;
   color: #fff;
   border: solid 1px #fff;
@@ -159,16 +159,66 @@ td#actions a{
   transition: all 0.2s ease-in-out;
 }
 
-a#edit{
+a#edit {
   margin-right: 1rem;
 }
 
-a#edit:hover{
+a#edit:hover {
   background-color: #0044ff;
   border: 1px solid #0044ff;
 }
 
-a#delete:hover{
+a#delete:hover {
   background-color: #ff0000;
   border: 1px solid #ff0000;
+}
+
+section#modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #00000090;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+section#modal div#card {
+  width: 50%;
+  position: relative;
+  background-color: #202024;
+  border-radius: 0.5rem;
+}
+
+section#modal div#card h2 {
+  padding: 2rem;
+  margin: 0;
+  color: #ffffff;
+}
+
+section#modal div#card a#close-modal {
+  position: absolute;
+  right: 0;
+  top: .7rem;
+  font-size: 1.4rem;
+  color: #ffffff;
+  padding: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+section#modal div#card a#close-modal:hover {
+  color: #ff0000;
+}
+
+section#modal div#card hr {
+  width: 90%;
+  margin: 0 auto;
+}
+
+form#form-modal {
+  width: 100%;
+  padding: 2rem 0;
 }

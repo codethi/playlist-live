@@ -17,7 +17,7 @@
                 <a href="/"><img src="/img/logoblue.png" alt="Logo da Blue"></a>
             </li>
             <li>
-                <a  href="/"><i class="bi bi-box-arrow-right"></i></a>
+                <a href="/"><i class="bi bi-box-arrow-right"></i></a>
             </li>
         </ul>
     </nav>
@@ -69,7 +69,7 @@
                                 <%= music.author %>
                             </td>
                             <td id="actions">
-                                <a id="edit" href="">Editar</a>
+                                <a id="edit" href="/by/<%= music._id %>">Editar</a>
                                 <a id="delete" href="">Apagar</a>
                             </td>
                         </tr>
@@ -80,6 +80,33 @@
         </div>
     </section>
 
+    <% if (music != null) { %>
+        <section id="modal">
+            <div id="card">
+                <a id="close-modal" href="/admin"><i class="bi bi-x-lg"></i></a>
+                <h2>Editar Musica</h2>
+                <hr>
+
+                <form id="form-modal" method="post" action="/update/<%= music._id %>">
+                    <label for="name">Nome:</label>
+                    <input type="text" name="name" id="name" value="<%= music.name %>">
+        
+                    <label for="author">Autor:</label>
+                    <input type="text" name="author" id="author" value="<%= music.author %>">
+        
+                    <label for="linkImage">Link da Imagem:</label>
+                    <input type="text" name="linkImage" id="linkImage" value="<%= music.linkImage %>">
+        
+                    <label for="linkMusic">Link da Música:</label>
+                    <input type="text" name="linkMusic" id="linkMusic" value="<%= music.linkMusic %>">
+        
+                    <button type="submit">Atualizar</button>
+                </form>
+
+            </div>
+            
+        </section>
+    <% } %>
 </body>
 
 </html>
