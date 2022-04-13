@@ -18,7 +18,7 @@
                 <a href="/"><img src="/img/logoblue.png" alt="Logo da Blue"></a>
             </li>
             <li>
-                <a href="/admin"><i class="bi bi-gear"></i></a> 
+                <a href="/admin"><i class="bi bi-gear"></i></a>
             </li>
         </ul>
     </nav>
@@ -66,9 +66,20 @@
         </div>
     </section>
 
-   
+    <section id="controls">
+        <i id="prev-control" class="bi bi-skip-start-fill"></i>
+        <i id="play-control" class="bi bi-play-fill"></i>
+        <i id="next-control" class="bi bi-skip-end-fill"></i>
 
-    
+        <span id="current-duration">00:00</span>
+        <input id="progressbar" type="range" min="0" max="0" step="1">
+        <span id="total-duration">00:00</span>
+
+        <i id="vol-icon" class="bi bi-volume-up-fill"></i>
+        <input id="volume" type="range" min="0" max="100" step="1">
+    </section>
+
+
 
 
 

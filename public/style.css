@@ -255,3 +255,43 @@ section#modal div#card div#btn-confirm a#yes:hover{
   background-color: #0044ff;
   border: 1px solid #0044ff;
 }
+
+section#controls{
+  background-color: #232327;
+  padding: 1.7rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+section#controls i{
+  font-size: 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+section#controls i:hover {
+  background-color: #ffffff10;
+  border-radius: 3rem;
+}
+
+section#controls input#progressbar {
+  width: 60%;
+}
+
+section#controls i#vol-icon {
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+section#controls input#volume {
+  width: 10%;
+}
+
+section#controls span {
+  padding: 1rem;
+}
