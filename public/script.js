@@ -61,6 +61,7 @@ controls.addEventListener("click", function (event) {
       currentMusic.audio.pause();
       isPlaying = false;
     }
+    musicEnded();
   }
 
   if (event.target.id == "vol-icon") {
@@ -76,45 +77,61 @@ controls.addEventListener("click", function (event) {
         "bi-volume-up-fill"
       );
     }
+    musicEnded();
   }
 
   if (event.target.id == "volume") {
     currentMusic.audio.volume = event.target.valueAsNumber / 100;
+    musicEnded();
   }
 
   if (event.target.id == "progressbar") {
     currentMusic.audio.currentTime = event.target.valueAsNumber;
+    musicEnded();
   }
 
   if (event.target.id == "next-control") {
     index++;
 
-    if (index == audios.length){
-        index = 0;
+    if (index == audios.length) {
+      index = 0;
     }
 
     currentMusic.audio.pause();
     updateDataMusic();
     currentMusic.audio.play();
     btnPlay.classList.replace("bi-play-fill", "bi-pause-fill");
+    musicEnded();
   }
 
   if (event.target.id == "prev-control") {
     index--;
 
-    if (index == -1){
-        index = audios.length - 1;
+    if (index == -1) {
+      index = audios.length - 1;
     }
 
     currentMusic.audio.pause();
     updateDataMusic();
     currentMusic.audio.play();
     btnPlay.classList.replace("bi-play-fill", "bi-pause-fill");
+    musicEnded();
   }
 
+  function musicEnded() {
+    currentMusic.audio.addEventListener("ended", function () {
+      index++;
 
+      if (index == audios.length) {
+        index = 0;
+      }
 
-
+      currentMusic.audio.pause();
+      updateDataMusic();
+      currentMusic.audio.play();
+      btnPlay.classList.replace("bi-play-fill", "bi-pause-fill");
+    });
+  }
 });
 
 function secondsToMinutes(time) {
