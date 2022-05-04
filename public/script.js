@@ -85,6 +85,36 @@ controls.addEventListener("click", function (event) {
   if (event.target.id == "progressbar") {
     currentMusic.audio.currentTime = event.target.valueAsNumber;
   }
+
+  if (event.target.id == "next-control") {
+    index++;
+
+    if (index == audios.length){
+        index = 0;
+    }
+
+    currentMusic.audio.pause();
+    updateDataMusic();
+    currentMusic.audio.play();
+    btnPlay.classList.replace("bi-play-fill", "bi-pause-fill");
+  }
+
+  if (event.target.id == "prev-control") {
+    index--;
+
+    if (index == -1){
+        index = audios.length - 1;
+    }
+
+    currentMusic.audio.pause();
+    updateDataMusic();
+    currentMusic.audio.play();
+    btnPlay.classList.replace("bi-play-fill", "bi-pause-fill");
+  }
+
+
+
+
 });
 
 function secondsToMinutes(time) {
